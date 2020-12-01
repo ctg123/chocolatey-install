@@ -1,2 +1,2 @@
 # chocolatey-install
-repo for automated scripts for Chocolately, a Windows SW package manager.
+repo for automated scripts via Chocolately, a Windows SW package manager.
