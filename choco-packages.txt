@@ -1,0 +1,4 @@
+#Utilities + other
+7zip.install
+notepadplusplus
+#dropbox
