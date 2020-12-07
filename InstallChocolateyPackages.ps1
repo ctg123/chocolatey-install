@@ -1,4 +1,3 @@
-
 function main {
     
     Update-Windows-Configuration
@@ -45,6 +44,8 @@ function Install-Utils {
     choco install -y putty.install
 
     choco install -y tightvnc
+	
+	choco install -y anydesk
 
     choco install -y winscp
 
