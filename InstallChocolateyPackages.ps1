@@ -1,8 +1,8 @@
 function main {
 
-Update-Windows-Configuration
+    Update_Windows_Configuration
 
-    Install-Chocolatey_Pkg_creation
+    Install-Chocolatey_Pkg_Creation
 
     Install-Browsers
 
@@ -16,7 +16,7 @@ Update-Windows-Configuration
 
 }
 
-function Update-Windows-Configuration {
+function Update_Windows_Configuration {
     Write-Host 'Configuring Windows'
 
     choco install -y taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:no'"
@@ -24,7 +24,7 @@ function Update-Windows-Configuration {
     choco install -y explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
 }
 
-function Install-Chocolatey_Pkg_creation {
+function Install-Chocolatey_Pkg_Creation {
 
     Write-Host 'Configuring Chocolatey package creation'
 
