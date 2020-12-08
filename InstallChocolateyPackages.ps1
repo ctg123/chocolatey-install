@@ -17,7 +17,7 @@ function main {
 }
 
 function Update_Windows_Configuration {
-    Write-Host 'Configuring Windows'
+    Write-Host 'Configuring Windows' -ForegroundColor Cyan
 
     choco install -y taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:no'"
     choco install -y desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:NO /RecycleBin:YES /OneDrive:NO'"
@@ -26,7 +26,7 @@ function Update_Windows_Configuration {
 
 function Install-Chocolatey_Pkg_Creation {
 
-    Write-Host 'Configuring Chocolatey package creation'
+    Write-Host 'Configuring Chocolatey package creation' -ForegroundColor Cyan
 
     choco install -y ussf
 
@@ -35,7 +35,7 @@ function Install-Chocolatey_Pkg_Creation {
 
 function Install-Browsers {
 
-    Write-Host 'Installing Web Browsers'
+    Write-Host 'Installing Web Browsers' -ForegroundColor Cyan
 
     choco install -y firefox
 
@@ -46,7 +46,7 @@ function Install-Browsers {
 
 function Install-Utils {
     
-    Write-Host 'Installing Utilities'
+    Write-Host 'Installing Utilities' -ForegroundColor Cyan
 
     choco install -y 7zip.install
 
@@ -84,7 +84,7 @@ function Install-Utils {
 
 function Install-Networking_VPN {
 
-    Write-Host 'Installing Networking tools and VPN'
+    Write-Host 'Installing Networking tools and VPN' -ForegroundColor Cyan
 
     choco install -y tapwindows
 
@@ -94,9 +94,9 @@ function Install-Networking_VPN {
 
 function Install-DevTools {
 
-    Write-Host 'Installing CLI Tools'
+    Write-Host 'Installing CLI Tools'   -ForegroundColor Cyan
 
-    choco install -y cygwin --params "/InstallDir:C:\tools /NoStartMenu"
+    choco install -y cygwin --params "/InstallDir:C:\tools /NoStartMenu" 
 
     choco install -y powershell-core
 
@@ -106,7 +106,7 @@ function Install-DevTools {
 
     choco install -y arduino-cli
 
-    Write-Host 'Installing Git and programming languages/frameworks'
+    Write-Host 'Installing Git and programming languages/frameworks' -ForegroundColor Cyan
 
     choco install -y git
 
@@ -127,23 +127,13 @@ function Install-DevTools {
 
     choco install -y hugo --params 'installdir=c:\\tools\\hugo'
 
-    Write-Host 'Installing Code editors'
+    Write-Host 'Installing Code editors' -ForegroundColor Cyan
 
     choco install -y vscode
 
     choco install -y notepadplusplus
 
-    Write-Host 'Installing Virtualization and container apps'
-
-    choco install -y virtualbox
-    
-    choco install -y vagrant
-    
-    choco install -y docker-desktop
-
-    choco install -y minikube
-
-    Write-Host 'Installing PCB Design software'
+    Write-Host 'Installing PCB Design software' -ForegroundColor Cyan
 
     choco install -y kicad
 
@@ -151,7 +141,7 @@ function Install-DevTools {
 
 function Install-ProductivityTools{
 
-    Write-Host 'Installing documentation software'
+    Write-Host 'Installing Documentation software' -ForegroundColor Cyan
 
     choco install -y notion
 
@@ -159,7 +149,7 @@ function Install-ProductivityTools{
 
     choco install -y typora
 
-    Write-Host 'Installing multimedia packages'
+    Write-Host 'Installing multimedia packages' -ForegroundColor Cyan
 
     choco install -y vlc
 
