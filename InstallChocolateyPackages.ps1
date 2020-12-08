@@ -33,7 +33,7 @@ function Install-Chocolatey_Pkg_Creation {
     choco install -y checksum
 }
 
-function Browsers {
+function Install-Browsers {
 
     Write-Host 'Installing Web Browsers'
 
@@ -60,7 +60,7 @@ function Install-Utils {
 
     choco install -y winscp
 
-    choco install -y partitionwinzard
+    choco install -y partitionwizard
 
     choco install -y greenshot
 
@@ -112,7 +112,7 @@ function Install-DevTools {
 
     choco install -y tortoisegit
 
-    choco install -y souretree
+    choco install -y sourcetree
 
     #For local servers
     choco install -y nginx --params '"/installLocation:C:\tools /port:433"'
@@ -135,9 +135,9 @@ function Install-DevTools {
 
     Write-Host 'Installing Virtualization and container apps'
 
-    choco install -y vagrant
-    
     choco install -y virtualbox
+    
+    choco install -y vagrant
     
     choco install -y docker-desktop
 
@@ -175,5 +175,3 @@ function Install-ProductivityTools{
 }
 
 main
-
-
