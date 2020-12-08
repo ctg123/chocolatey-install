@@ -3,13 +3,13 @@ function main {
     Update-Windows-Configuration
 	
 	Chocolatey-pkg-creation
+	
+	Install-Browsers
 
     Install-Utils
 
     Install-Networking_VPN
 	
-	Install-Browsers
-
     Install-DevTools
 
     Install-ProductivityTools
@@ -31,6 +31,17 @@ function Chocolatey-pkg-creation {
     choco install -y ussf
 
     choco install -y checksum
+}
+
+function Browsers {
+
+	Write-Host 'Installing Web Browsers'
+
+	choco install -y firefox
+	
+	choco install -y googlechrome
+	
+	choco install -y microsoft-edge
 }
 
 function Install-Utils {
@@ -86,8 +97,10 @@ function Install-Networking_VPN {
 function Install-DevTools {
     
     Write-Host 'Installing CLI Tools'
-
-    choco install -y powershell-core
+	
+	choco install -y cygwin --params "/InstallDir:C:\tools /NoStartMenu"
+	
+	choco install -y powershell-core
 
     choco install -y microsoft-windows-terminal
 
@@ -102,16 +115,19 @@ function Install-DevTools {
     choco install -y tortoisegit
 	
 	choco install -y souretree
+	
+	#For local servers
+	choco install -y nginx --params '"/installLocation:C:\tools /port:433"'
 
-    choco install -y nodejs
+    choco install -y nodejs --params 'installdir=c:\\tools\\nodejs' 
 	
-	choco install -y openjdk8jre
+	choco install -y openjdk8jre --params 'installdir=c:\\tools\\openjdk8'
 	
-	choco install -y python
+	choco install -y python --params 'installdir=c:\\tools\\python'
 	
-	choco install -y golang
+	choco install -y golang --params 'installdir=c:\\tools\\golang'
 	
-	choco install -y hugo
+	choco install -y hugo --params 'installdir=c:\\tools\\hugo'
 	
 	Write-Host 'Installing Code editors'
 	
@@ -119,13 +135,13 @@ function Install-DevTools {
 	
 	choco install -y notepadplusplus
 	
-	Write-Host 'Installing Virtualization and containers'
+	Write-Host 'Installing Virtualization and container apps'
 	
 	choco install -y vagrant
 	
 	choco install -y virtualbox
 	
-	choco install -y docker-desktopicon
+	choco install -y docker-desktop
 	
 	choco install -y minikube
 	
