@@ -71,8 +71,6 @@ function Install-Utils {
     choco install -y aria2
 
     choco install -y ffmpeg
-
-    choco install -y ffmpeg
 	
 	choco install -y keepass.install
 
