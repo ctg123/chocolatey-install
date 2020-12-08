@@ -2,7 +2,7 @@ function main {
 
 Update-Windows-Configuration
 
-    Chocolatey-pkg-creation
+    Install-Chocolatey_Pkg_creation
 
     Install-Browsers
 
@@ -24,7 +24,7 @@ function Update-Windows-Configuration {
     choco install -y explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
 }
 
-function Chocolatey-pkg-creation {
+function Install-Chocolatey_Pkg_creation {
 
     Write-Host 'Configuring Chocolatey package creation'
 
