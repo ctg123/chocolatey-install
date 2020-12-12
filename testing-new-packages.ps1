@@ -12,6 +12,7 @@ choco install -y vivaldi
 
 #utils
 choco install -y irfanviewplugins
+choco install -y vault # This is Hashicorp vault for storing secrets and pw's for authentication of CSP's.
 
 # choco updates
 choco install -y choco-package-list-backup
