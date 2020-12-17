@@ -1,7 +1,5 @@
 function main {
 
-    Update_Windows_Configuration
-
     Install-Chocolatey_Pkg_Creation
 
     Install-Browsers
@@ -14,14 +12,6 @@ function main {
 
     Install-ProductivityTools
 
-}
-
-function Update_Windows_Configuration {
-    Write-Host 'Configuring Windows' -ForegroundColor Cyan
-
-    choco install -y taskbar-winconfig --params "'/LOCATION:bottom /SIZE:medium /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:yes'"
-    choco install -y desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:NO /RecycleBin:YES /OneDrive:NO'"
-    choco install -y explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
 }
 
 function Install-Chocolatey_Pkg_Creation {
@@ -117,15 +107,15 @@ function Install-DevTools {
     #For local servers
     choco install -y nginx --params '"/installLocation:C:\tools /port:433"'
 
-    choco install -y nodejs --params 'installdir=c:\\tools\\nodejs' 
+    choco install -y nodejs --params "/InstallDir:C:\tools\Nodejs /NoStartMenu"
 
-    choco install -y openjdk8jre --params 'installdir=c:\\tools\\openjdk8'
+    choco install -y openjdk8jre --params "/InstallDir:C:\tools\Java /NoStartMenu"
 
-    choco install -y python --params 'installdir=c:\\tools\\python'
-    
-    choco install -y golang --params 'installdir=c:\\tools\\golang'
+    choco install -y python --params "/InstallDir:C:\tools\Python /NoStartMenu"
 
-    choco install -y hugo --params 'installdir=c:\\tools\\hugo'
+    choco install -y golang --params "/InstallDir:C:\tools\Golang /NoStartMenu"
+
+    choco install -y hugo --params "/InstallDir:C:\tools\Hugo /NoStartMenu"
 
     Write-Host 'Installing Code editors' -ForegroundColor Cyan
 
