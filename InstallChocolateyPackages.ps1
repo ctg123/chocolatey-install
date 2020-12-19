@@ -95,6 +95,8 @@ function Install-DevTools {
     choco install -y awscli
 
     choco install -y arduino-cli
+    # For Arduino IDE
+    choco install -y arduino
 
     Write-Host 'Installing Git and programming languages/frameworks' -ForegroundColor Cyan
 
