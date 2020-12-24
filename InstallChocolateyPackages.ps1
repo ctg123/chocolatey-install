@@ -16,7 +16,9 @@ function main {
 
 function Install-Chocolatey_Pkg_Creation {
 
-    Write-Host 'Configuring Chocolatey package creation' -ForegroundColor Cyan
+    Write-Host 'Configuring Chocolatey package creation and GUI' -ForegroundColor Cyan
+
+    choco install -y chocolateygui
 
     choco install -y ussf
 
