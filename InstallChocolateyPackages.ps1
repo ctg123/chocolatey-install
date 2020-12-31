@@ -56,6 +56,8 @@ function Install-Utils {
 
     choco install -y greenshot
 
+    choco install -y inkscape
+
     choco install -y adobereader
 
     choco install -y ccleaner
