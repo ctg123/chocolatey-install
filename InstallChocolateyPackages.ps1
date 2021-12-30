@@ -48,7 +48,7 @@ function Install-Utils {
 
     choco install -y tightvnc
 
-    choco install -y anydesk
+    choco install anydesk.portable --params="'/install'"
 
     choco install -y winscp
 
