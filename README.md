@@ -39,4 +39,13 @@ code --list-extensions | ForEach-Object {"code --install-extension $_"} > extens
 
 # Running the Script to install all the extensions
 ./extensions.ps1
+
+# To export the list of extensions in a Unix environment (Linux/MacOS), use the following script
+$ code --list-extensions | xargs -L 1 echo code --install-extension > extensions.sh
+
+# Running the Script to install all the extensions
+
+$ chmod +x extensions.sh
+
+$ sh extension.sh or ./extensions.sh
  ```
