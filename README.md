@@ -8,11 +8,11 @@ In the command prompt or terminal app (such as Windows Terminal, etc.) here is a
 
 # This will show all the software packages installed on your machine both managed by Chocolatey or unmanaged.
 
-PS C:\Users\...> choco list --include-programs
+PS C:\Users\...> choco list -i
 
 # Shows the list of software packages managed by Chocolatey. 
 
-PS C:\Users\...> choco list -i
+PS C:\Users\...> choco list
 
 # This command will update all the software packages managed by Chocolatey.
 
