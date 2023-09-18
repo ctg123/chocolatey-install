@@ -8,11 +8,11 @@ In the command prompt or terminal app (such as Windows Terminal, etc.) here is a
 
 # This will show all the software packages installed on your machine both managed by Chocolatey or unmanaged.
 
-PS C:\Users\...> choco list -lo --include-programs
+PS C:\Users\...> choco list --include-programs
 
 # Shows the list of software packages managed by Chocolatey. 
 
-PS C:\Users\...> clist -l
+PS C:\Users\...> choco list -i
 
 # This command will update all the software packages managed by Chocolatey.
 
@@ -48,4 +48,4 @@ $ code --list-extensions | xargs -L 1 echo code --install-extension > extensions
 $ chmod +x extensions.sh
 
 $ sh extension.sh or ./extensions.sh
- ```
+```
