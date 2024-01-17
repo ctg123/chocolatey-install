@@ -31,7 +31,7 @@ function Install-Browsers {
 
     choco install -y firefox
 
-    choco install -y googlechrome
+    choco install -y brave
 
     choco install -y microsoft-edge
 }
@@ -58,7 +58,7 @@ function Install-Utils {
 
     choco install -y inkscape
 
-    choco install -y adobereader
+    #choco install -y adobereader
 
     choco install -y ccleaner
 
@@ -66,9 +66,17 @@ function Install-Utils {
 
     choco install -y ffmpeg
     
-    choco install -y keepass.install
+    choco install -y keepassxc
 
     choco install -y etcher
+	
+	choco install -y rpi-imager
+	
+	choco install -y syncthing
+	
+	choco install -y sysinternals
+	
+	choco install -y lockhunter
 
     choco install -y foxitreader --ia '/MERGETASKS="!desktopicon,!setdefaultreader,!displayinbrowser /COMPONENTS=*pdfviewer,*ffse,*installprint,*ffaddin,*ffspellcheck,!connectedpdf"'
 
@@ -80,10 +88,9 @@ function Install-Networking_VPN {
 
     Write-Host 'Installing Networking tools and VPN' -ForegroundColor Cyan
 
-    choco install -y tapwindows
-
-    choco install -y wireguard
-
+    choco install -y tailscale
+ 
+	choco install -y tapwindows
 }
 
 function Install-DevTools {
@@ -108,16 +115,20 @@ function Install-DevTools {
 
     choco install -y tortoisegit
 
-    choco install -y sourcetree
+    choco install -y github-desktop
+	
+	choco install -y postman
 
     #For local servers
     choco install -y nginx --params '"/installLocation:C:\tools /port:433"'
 
     choco install -y nodejs --params "/InstallDir:C:\tools\Nodejs /NoStartMenu"
+	
+	choco install -y yarn
 
     choco install -y openjdk8jre --params "/InstallDir:C:\tools\Java /NoStartMenu"
 
-    choco install -y python --params "/InstallDir:C:\tools\Python /NoStartMenu"
+    choco install -y pyenv-win --params "/InstallDir:C:\tools\Python /NoStartMenu"
 
     choco install -y golang --params "/InstallDir:C:\tools\Golang /NoStartMenu"
 
@@ -139,25 +150,33 @@ function Install-ProductivityTools{
 
     Write-Host 'Installing Documentation software' -ForegroundColor Cyan
 
-    choco install -y notion
+    #choco install -y notion
 
     choco install -y libreoffice
 
     choco install -y typora
+	
+	choco install -y drawio
 
     Write-Host 'Installing multimedia packages' -ForegroundColor Cyan
 
     choco install -y vlc
 
     choco install -y plex
+	
+	choco install -y audacity
+	
+	choco install -y calibre
 
-    choco install -y youtube-dl
+    #choco install -y youtube-dl
 
     choco install -y obs-studio
 
     choco install -y spotify
 
-    choco install -y telegram
+    choco install -y slack
+	
+	choco install -y zoom
 }
 
 main
