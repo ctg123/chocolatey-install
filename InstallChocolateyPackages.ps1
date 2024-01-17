@@ -70,13 +70,13 @@ function Install-Utils {
 
     choco install -y etcher
 	
-	choco install -y rpi-imager
+    choco install -y rpi-imager
+	 
+    choco install -y synching
+     
+    choco install -y sysinternals
 	
-	choco install -y syncthing
-	
-	choco install -y sysinternals
-	
-	choco install -y lockhunter
+    choco install -y lockhunter
 
     choco install -y foxitreader --ia '/MERGETASKS="!desktopicon,!setdefaultreader,!displayinbrowser /COMPONENTS=*pdfviewer,*ffse,*installprint,*ffaddin,*ffspellcheck,!connectedpdf"'
 
@@ -90,7 +90,7 @@ function Install-Networking_VPN {
 
     choco install -y tailscale
  
-	choco install -y tapwindows
+    choco install -y tapwindows
 }
 
 function Install-DevTools {
@@ -117,14 +117,14 @@ function Install-DevTools {
 
     choco install -y github-desktop
 	
-	choco install -y postman
+    choco install -y postman
 
     #For local servers
     choco install -y nginx --params '"/installLocation:C:\tools /port:433"'
 
     choco install -y nodejs --params "/InstallDir:C:\tools\Nodejs /NoStartMenu"
 	
-	choco install -y yarn
+    choco install -y yarn
 
     choco install -y openjdk8jre --params "/InstallDir:C:\tools\Java /NoStartMenu"
 
@@ -156,7 +156,7 @@ function Install-ProductivityTools{
 
     choco install -y typora
 	
-	choco install -y drawio
+    choco install -y drawio
 
     Write-Host 'Installing multimedia packages' -ForegroundColor Cyan
 
@@ -164,9 +164,9 @@ function Install-ProductivityTools{
 
     choco install -y plex
 	
-	choco install -y audacity
+    choco install -y audacity
 	
-	choco install -y calibre
+    choco install -y calibre
 
     #choco install -y youtube-dl
 
@@ -176,7 +176,7 @@ function Install-ProductivityTools{
 
     choco install -y slack
 	
-	choco install -y zoom
+    choco install -y zoom
 }
 
 main
